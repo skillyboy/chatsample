@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
 
+<html>
 <body>
     <script>
         var script = document.createElement("script");
@@ -10,120 +10,7 @@
             const meeting = new VideoSDKMeeting();
 
             const config = {
-                name: "Name",
-                apiKey: "47a3f25a-21fc-4bd2-b0ed-ccae899c36cd",
-                participantId: "demouser@gmail.com",
-                //token: "JWT Token", // generated in step 1
-                meetingId: "Video SDK Room ID", // enter your meeting id
-
-                containerId: null,
-                redirectOnLeave: "https://www.videosdk.live/",
-
-                micEnabled: true,
-                webcamEnabled: true,
-                participantCanToggleSelfWebcam: true,
-                participantCanToggleSelfMic: true,
-
-                chatEnabled: false,
-                screenShareEnabled: false,
-                pollEnabled: false,
-                whiteboardEnabled: false,
-                raiseHandEnabled: false,
-
-                recording: {
-                    enabled: false,
-                    webhookUrl: "",
-                    //awsDirPath: `/meeting-recordings/${meetingId}/`,
-                    autoStart: false,
-
-                    layout: {
-                        type: "GRID", // "SPOTLIGHT" | "SIDEBAR" | "GRID"
-                        priority: "SPEAKER", // "SPEAKER" | "PIN",
-                        gridSize: 3,
-                    },
-                },
-
-                layout: {
-                    type: "GRID", // "SPOTLIGHT" | "SIDEBAR" | "GRID"
-                    priority: "SPEAKER", // "SPEAKER" | "PIN",
-                    gridSize: 3,
-                },
-
-                branding: {
-                    enabled: true,
-                    logoURL: "https://static.videosdk.live/videosdk.live/videosdk_logo_circle_big.png",
-                    name: "Prebuilt",
-                    poweredBy: false,
-                },
-
-                participantCanLeave: false, // if false, leave button won't be visible
-
-                // Live stream meeting to youtube
-                livestream: {
-                    autoStart: false,
-                    enabled: false,
-                },
-
-                permissions: {
-                    pin: false,
-                    askToJoin: false, // Ask joined participants for entry in meeting
-                    toggleParticipantMic: false, // Can toggle other participant's mic
-                    toggleParticipantWebcam: false, // Can toggle other participant's webcam
-                    drawOnWhiteboard: false, // Can draw on whiteboard
-                    toggleWhiteboard: false, // Can toggle whiteboard
-                    toggleRecording: false, // Can toggle meeting recording
-                    removeParticipant: false, // Can remove participant
-                    endMeeting: true, // Can end meeting
-                    toggleLivestream: false,
-                    changeLayout: false,
-                },
-
-                joinScreen: {
-                    visible: true, // Show the join screen ?
-                    title: "Daily scrum", // Meeting title
-                    meetingUrl: window.location.href, // Meeting joining url
-                },
-
-
-                leftScreen: {
-                    actionButton: {
-                        label: "Video SDK",
-                        href: "https://videosdk.live/",
-                    },
-                    rejoinButtonEnabled: true,
-                },
-
-                notificationSoundEnabled: true,
-
-                debug: true,
-
-                maxResolution: "hd", // "hd" or "sd"
-
-                preferredProtocol: "UDP_OVER_TCP",
-
-            };
-
-            meeting.init(config);
-        });
-
-        script.src =
-            "https://sdk.videosdk.live/rtc-js-prebuilt/0.3.6/rtc-js-prebuilt.js";
-        document.getElementsByTagName("head")[0].appendChild(script);
-    </script>
-</body>
-
-</html>
-<html>
-
-<body>
-    <script>
-        var script = document.createElement("script");
-        script.type = "text/javascript";
-
-        script.addEventListener("load", function(event) {
-            const meeting = new VideoSDKMeeting();
-
-            const config = {
+                debug:true
                 name: "Name",
                 apiKey: "47a3f25a-21fc-4bd2-b0ed-ccae899c36cd",
                 participantId: "demouser@gmail.com",
